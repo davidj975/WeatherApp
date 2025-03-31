@@ -24,7 +24,7 @@ class CustomSearchBar extends StatelessWidget {
             onPressed: () {
               onSearch(_controller.text);
               _controller.clear();
-              FocusScope.of(context).unfocus(); // Oculta el teclado
+              FocusScope.of(context).unfocus(); 
             },
           ),
         ),
