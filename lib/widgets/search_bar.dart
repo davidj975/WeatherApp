@@ -1,25 +1,17 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatefulWidget {
+class CustomSearchBar extends StatelessWidget {
   final Function(String) onSearch;
 
-  const SearchBar({required this.onSearch});
-
-  @override
-  _SearchBarState createState() => _SearchBarState();
-}
-
-class _SearchBarState extends State<SearchBar> {
-  final _controller = TextEditingController();
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  const CustomSearchBar({
+    Key? key,
+    required this.onSearch,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _controller = TextEditingController();
+
     return Padding(
       padding: EdgeInsets.all(16),
       child: TextField(
@@ -30,14 +22,14 @@ class _SearchBarState extends State<SearchBar> {
           suffixIcon: IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              widget.onSearch(_controller.text);
+              onSearch(_controller.text);
               _controller.clear();
               FocusScope.of(context).unfocus(); // Oculta el teclado
             },
           ),
         ),
         onSubmitted: (text) {
-          widget.onSearch(text);
+          onSearch(text);
           _controller.clear();
           FocusScope.of(context).unfocus();
         },
