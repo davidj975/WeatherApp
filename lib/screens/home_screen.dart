@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.bold,
             color: Theme.of(context).brightness == Brightness.dark
                 ? Colors.white
-                : Colors.deepPurple.shade700, // Color más oscuro para modo claro
+                : Colors.deepPurple.shade700,
           ),
         ),
         actions: [
@@ -135,7 +135,6 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Buscador mejorado
                 Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).cardColor,
@@ -183,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
 
-                // Ciudad principal (Lleida)
+                // Ciudad principal
                 const SizedBox(height: 24),
                 _buildSectionTitle(context, 'Tu Ciudad'),
                 const SizedBox(height: 16),

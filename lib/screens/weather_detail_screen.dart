@@ -34,7 +34,7 @@ class _WeatherDetailScreenState extends State<WeatherDetailScreen> {
           ? const Color(0xFF1A1A2E)
           : const Color(0xFFF5F7FA),
       appBar: AppBar(
-        title: const Text('Radar Meteorológico'), // Cambiado de 'Weather Map'
+        title: const Text('Radar Meteorológico'),
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: isDarkMode ? Colors.white : Colors.black,
@@ -45,7 +45,7 @@ class _WeatherDetailScreenState extends State<WeatherDetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Main temperature display
+              //temperature display
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
@@ -96,7 +96,7 @@ class _WeatherDetailScreenState extends State<WeatherDetailScreen> {
                     child: _buildIndicatorCard(
                       icon: Icons.air,
                       value: widget.weather.wind,
-                      maxValue: 100, // Valor máximo típico para velocidad del viento
+                      maxValue: 100,
                       unit: 'km/h',
                       label: 'Viento',
                       context: context,
@@ -106,7 +106,7 @@ class _WeatherDetailScreenState extends State<WeatherDetailScreen> {
                   Expanded(
                     child: _buildIndicatorCard(
                       icon: Icons.water_drop,
-                      value: widget.weather.humidity.toDouble(), // Necesitarás añadir esto al modelo
+                      value: widget.weather.humidity.toDouble(), 
                       maxValue: 100,
                       unit: '%',
                       label: 'Humedad',
@@ -118,7 +118,7 @@ class _WeatherDetailScreenState extends State<WeatherDetailScreen> {
                     child: _buildIndicatorCard(
                       icon: Icons.compress,
                       value: widget.weather.pressure,
-                      maxValue: 1100, // Valor máximo típico para presión atmosférica
+                      maxValue: 1100,
                       unit: 'hPa',
                       label: 'Presión',
                       context: context,

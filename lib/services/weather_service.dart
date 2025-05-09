@@ -100,7 +100,7 @@ class WeatherService {
                 date: DateFormat('EEE, MMM d').format(dateTime),
                 temp: avgTemp,
                 description: _weatherTranslations[middayEntry['weather'][0]['description']] ?? 
-                            middayEntry['weather'][0]['description'], // Traducción con fallback
+                            middayEntry['weather'][0]['description'],
                 icon: '$iconBaseUrl/${middayEntry['weather'][0]['icon']}@2x.png',
               ));
               seenDays.add(dayKey);
@@ -112,7 +112,7 @@ class WeatherService {
           city: data['city']['name'],
           country: data['city']['country'],
           description: _weatherTranslations[list[0]['weather'][0]['description']] ?? 
-                      list[0]['weather'][0]['description'], // Traducción con fallback
+                      list[0]['weather'][0]['description'],
           temp: list[0]['main']['temp'].toDouble(),
           wind: list[0]['wind']['speed'].toDouble(),
           pressure: list[0]['main']['pressure'].toDouble(),

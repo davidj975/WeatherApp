@@ -7,7 +7,7 @@ class Weather {
   final double pressure;
   final List<HourlyForecast> hourly;
   final List<DailyForecast>? daily;
-  final double? pop; // Probability of precipitation (0-100)
+  final double? pop; // Probability
   final double humidity;
 
   Weather({

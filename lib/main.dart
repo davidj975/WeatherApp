@@ -15,7 +15,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => WeatherProvider()),
-        ChangeNotifierProvider(create: (_) => FavoritesProvider()), // Añade esta línea
+        ChangeNotifierProvider(create: (_) => FavoritesProvider()),
       ],
       child: const MyApp(),
     ),

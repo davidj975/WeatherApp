@@ -14,7 +14,7 @@ class WeatherMapScreen extends StatelessWidget {
       ),
       body: FlutterMap(
         options: MapOptions(
-          center: LatLng(41.6183, 0.6223), // Lleida
+          center: LatLng(41.6183, 0.6223), 
           zoom: 6.0,
           maxZoom: 18.0,
           minZoom: 3.0,

@@ -65,7 +65,6 @@ class WeatherCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Temperatura centrada
                       Center(
                         child: Container(
                           margin: const EdgeInsets.only(bottom: 8),
@@ -84,7 +83,7 @@ class WeatherCard extends StatelessWidget {
                           child: Text(
                             '${weather.temp.round()}°',
                             style: TextStyle(
-                              fontSize: 34, // Aumentado de 28 a 34
+                              fontSize: 34,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               shadows: [
@@ -99,7 +98,7 @@ class WeatherCard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // Nombre de la ciudad
+                      // Ciudad y descripción
                       Text(
                         weather.city,
                         style: const TextStyle(
